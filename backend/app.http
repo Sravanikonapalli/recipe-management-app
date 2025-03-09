@@ -1,0 +1,11 @@
+### get all recipes
+GET http://localhost:3000/recipes
+
+### create new recipe
+POST http://localhost:3000/recipes
+
+### update new recipe
+PUT http://localhost:3000/recipes/1
+
+### get each recipe
+GET http://localhost:3000/recipes/1
