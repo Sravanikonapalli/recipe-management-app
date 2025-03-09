@@ -34,6 +34,7 @@
 
 .recipe-details p {
   margin: 10px 0;
+  color: cadetblue;
 }
 
 .recipe-section {
@@ -41,4 +42,5 @@
   background: #f9f9f9;
   border-left: 4px solid #007bff;
   margin: 10px 0;
+  color: cadetblue;
 }
