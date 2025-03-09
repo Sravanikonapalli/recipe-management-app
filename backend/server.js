@@ -40,21 +40,14 @@ app.get("/recipes", async (req, res) => {
 });
 
 // Create a new recipe in the database
-const recipeSchema = Joi.object({
-  title: Joi.string().required(),
-  image: Joi.string().uri().allow(''),
-  instructions: Joi.string().required(),
-  categories: Joi.string().required(),
-  cost: Joi.number().required(),
-});
-
 app.post("/recipes", async (req, res) => {
-  const { error } = recipeSchema.validate(req.body);
-  if (error) {
-    return res.status(400).json({ error: error.details[0].message });
-  }
   try {
     const { title, image, instructions, categories, cost } = req.body;
+    if (!title || !instructions || !categories || cost === undefined) {
+      return res.status(400).json({ 
+        error: "Missing required fields: title, instructions, categories, and cost." 
+      });
+    }
     const insertQuery = `
       INSERT INTO recipes (title, image, instructions, categories, cost)
       VALUES (?, ?, ?, ?, ?);
