@@ -1,41 +1,32 @@
-# Recipe Management Application
+#  Recipe Management Application
 
-## Overview
-This project is a full-stack Recipe Management Application built using the MERN stack (SQLite, Express.js, React, Node.js). It allows users to add, view, organize, and manage recipes efficiently.
-
-## Tech Stack
-- **Frontend:** React.js
-- **Backend:** Node.js, Express.js
-- **Database:** SQLite
+##  Overview
+This project is a **full-stack Recipe Management Application** built using **React, Node.js, Express, and SQLite**.  
+It allows users to **add, view, organize, and manage recipes** efficiently.
 
 ---
 
-## Features
-- Add new recipes with title,images, instructions,description, categories, and cost.
-- View a list of all available recipes.
-- delete existing recipes.
+##  Tech Stack
+- **Frontend:** React.js 
+- **Backend:** Node.js + Express.js 
+- **Database:** SQLite 
+
 ---
 
-## API Endpoints
+##  Features
+ **Add new recipes** with **title, image, instructions, description, categories, and cost**  
+ **View a list** of all available recipes  
+ **Delete existing recipes**  
 
-### **1. Get all recipes**
-**Endpoint:** `GET https://recipe-management-app-q93w.onrender.com/recipes`  
-**Response:**
-```json
-[
-  {
-    "id": 1,
-    "title": "Spaghetti Carbonara",
-    "image": "https://assets.unileversolutions.com/recipes-v2/109396.jpg",
-    "instructions": "Boil pasta, cook pancetta, mix with eggs, cheese, and pepper.",
-    "categories": "Italian, Pasta",
-    "cost": 12.99
-  }
-]
+---
 
-**2. Get single recipe**
-**Endpoint:** `GET https://recipe-management-app-q93w.onrender.com/recipes/:id`  
-**Example:** `GET /recipes/1`
+##  API Endpoints
+
+### **1 Get All Recipes**
+**Endpoint:**  
+```http
+GET https://recipe-management-app-q93w.onrender.com/recipes
+```
 **Response:**
 ```json
 [
@@ -50,67 +41,103 @@ This project is a full-stack Recipe Management Application built using the MERN 
 ]
 ```
 
-**3. Create a new recipe**
-**Endpoint:** POST `https://recipe-management-app-q93w.onrender.com/recipes`
+---
+
+### **2 Get Single Recipe**
+**Endpoint:**  
+```http
+GET https://recipe-management-app-q93w.onrender.com/recipes/:id
+```
+**Example:**  
+```http
+GET /recipes/1
+```
+**Response:**
+```json
+{
+  "id": 1,
+  "title": "Spaghetti Carbonara",
+  "image": "https://assets.unileversolutions.com/recipes-v2/109396.jpg",
+  "instructions": "Boil pasta, cook pancetta, mix with eggs, cheese, and pepper.",
+  "categories": "Italian, Pasta",
+  "cost": 12.99
+}
+```
+
+---
+
+### **3 Create a New Recipe**
+**Endpoint:**  
+```http
+POST https://recipe-management-app-q93w.onrender.com/recipes
+```
 **Request Body:**
 ```json
-[
-    {
-    "id": 14,
-    "title": "BBQ Ribs",
-    "image": "https://grillinwithdad.com/wp-content/uploads/2024/04/ribs-featured-500x500.jpg",
-    "instructions": "Slow-cook ribs, glaze with BBQ sauce, and grill.",
-    "categories": "American, Grilled",
-    "cost": 18.99
-    }
-]
+{
+  "title": "BBQ Ribs",
+  "image": "https://grillinwithdad.com/wp-content/uploads/2024/04/ribs-featured-500x500.jpg",
+  "instructions": "Slow-cook ribs, glaze with BBQ sauce, and grill.",
+  "categories": "American, Grilled",
+  "cost": 18.99
+}
 ```
-**Response**
+**Response:**
 ```json
 {
   "message": "Recipe added successfully!",
   "recipeId": 5
 }
 ```
-### **Installation & Setup**
-**1. Clone the Repository**
-``
+
+---
+
+## 🚀 Installation & Setup
+
+### **1 Clone the Repository**
+```sh
 git clone https://github.com/Sravanikonapalli/recipe-management-app
 cd recipe-management-app
-``
+```
 
-**2. Setup Frontend**
-``
+### **2 Setup Frontend**
+```sh
 cd frontend
 npm install
 npm start
-``
-**3. setup backend**
-``
+```
+
+### **3 Setup Backend**
+```sh
 cd backend
 npm install
 node server.js
-``
-**4. setup Database**
-``
+```
+
+### **4 Setup Database**
+```sh
 cd backend
 sqlite3 database.db
-``
-*to check stored recipes*
-``
-select * from recipes;
-``
-*to check stored recipe_details*
-``
-select * from recipe_details;
-``
+```
+**To check stored recipes:**
+```sql
+SELECT * FROM recipes;
+```
+**To check stored recipe details:**
+```sql
+SELECT * FROM recipe_details;
+```
 
-### **LIVE DEMO**
-**backend**
-[Get All Recipes] (https://recipe-management-app-q93w.onrender.com/recipes)
-[get unique recipe] (https://recipe-management-app-q93w.onrender.com/recipes/:id)
-**NOTE** *replace :id with specific number (e.g.,1,2,5,...)*
+---
 
-**frontend**
-[Live Frontend] (https://recipe-management-app-t8oa.vercel.app/)
+##  Live Demo
+
+### ** Backend**
+- [Get All Recipes](https://recipe-management-app-q93w.onrender.com/recipes)  
+- [Get Single Recipe](https://recipe-management-app-q93w.onrender.com/recipes/:id)  
+  **Note:** Replace `:id` with a specific number (e.g., `1`, `2`, `5`, etc.).
+
+### ** Frontend**
+- [Live Frontend](https://recipe-management-app-t8oa.vercel.app/)
+
+---
 
