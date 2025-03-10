@@ -19,7 +19,7 @@ function App() {
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme);
-        localStorage.setItem("theme", newTheme); // Save theme to localStorage
+        localStorage.setItem("theme", newTheme); 
     };
 
     return (

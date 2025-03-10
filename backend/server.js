@@ -110,6 +110,17 @@ app.get("/recipes/:id", async (req, res) => {
     }
   });
   
+  //delete the recipe
+  app.delete('/recipes/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+      await db.run('DELETE FROM recipes WHERE id = ?', id);
+      res.status(200).json({ message: "Recipe deleted successfully" });
+    } catch (error) {
+      res.status(500).json({ error: "Error deleting recipe" });
+    }
+  });
+  
   //middleware
   app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);

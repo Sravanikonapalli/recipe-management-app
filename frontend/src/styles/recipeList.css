@@ -103,3 +103,12 @@
     }
   }
   
+  .loading-message{
+    color: brown;
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+  }
+  .delete-btn{
+    margin-left: 10px;
+  }

@@ -21,32 +21,32 @@ function RecipeDetails() {
 
   return (
     <div className="container">
-  <Link to="/" className="back-link"><FaArrowLeft size={20}/> Back to Recipes</Link>
-  <h2 className="recipe-title">{recipe.title}</h2>
-  {recipe.image && (
-    <img className="recipe-image" src={recipe.image} alt={recipe.title} />
-  )}
-  <div className="recipe-details">
-    <p><strong>Instructions:</strong> {recipe.instructions}</p>
-    <p><strong>Categories:</strong> {recipe.categories}</p>
-    <p><strong>Cost:</strong> ${recipe.cost}</p>
-    {recipe.detailed_description && (
-      <p className="recipe-section">
-        <strong>Detailed Description:</strong> {recipe.detailed_description}
-      </p>
-    )}
-    {recipe.cooking_tips && (
-      <p className="recipe-section">
-        <strong>Cooking Tips:</strong> {recipe.cooking_tips}
-      </p>
-    )}
-    {recipe.history && (
-      <p className="recipe-section">
-        <strong>History:</strong> {recipe.history}
-      </p>
-    )}
+      <Link to="/" className="back-link"><FaArrowLeft size={20}/> Back to Recipes</Link>
+      <h2 className="recipe-title">{recipe.title}</h2>
+      {recipe.image && (
+      <img className="recipe-image" src={recipe.image} alt={recipe.title} />
+      )}
+      <div className="recipe-details">
+        <p><strong>Instructions:</strong> {recipe.instructions}</p>
+        <p><strong>Categories:</strong> {recipe.categories}</p>
+        <p><strong>Cost:</strong> ${recipe.cost}</p>
+        {recipe.detailed_description && (
+          <p className="recipe-section">
+            <strong>Detailed Description:</strong> {recipe.detailed_description}
+          </p>
+        )}
+        {recipe.cooking_tips && (
+          <p className="recipe-section">
+            <strong>Cooking Tips:</strong> {recipe.cooking_tips}
+          </p>
+        )}
+        {recipe.history && (
+          <p className="recipe-section">
+            <strong>History:</strong> {recipe.history}
+          </p>
+        )}
+      </div>
   </div>
-</div>
 
   );
 }
