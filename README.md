@@ -48,6 +48,7 @@ This project is a full-stack Recipe Management Application built using the MERN 
     "cost": 12.99
   }
 ]
+```
 
 **3. Create a new recipe**
 **Endpoint:** POST `https://recipe-management-app-q93w.onrender.com/recipes`
@@ -63,14 +64,14 @@ This project is a full-stack Recipe Management Application built using the MERN 
     "cost": 18.99
     }
 ]
-
+```
 **Response**
 ```json
 {
   "message": "Recipe added successfully!",
   "recipeId": 5
 }
-
+```
 ### **Installation & Setup**
 **1. Clone the Repository**
 ``
