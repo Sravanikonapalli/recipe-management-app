@@ -34,7 +34,7 @@
 
 .recipe-details p {
   margin: 10px 0;
-  color: cadetblue;
+  color: rgb(8, 89, 92);
 }
 
 .recipe-section {
@@ -42,5 +42,5 @@
   background: #f9f9f9;
   border-left: 4px solid #007bff;
   margin: 10px 0;
-  color: cadetblue;
+  color: rgb(13, 229, 236);
 }
